@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.1.1-cudnn8-runtime-ubuntu22.04
+FROM nvidia/cuda:12.5.1-cudnn-runtime-ubuntu22.04
 
 # install python 3.11 and pip
 ENV DEBIAN_FRONTEND=noninteractive
@@ -22,6 +22,8 @@ ENV PATH="/.venv/bin:${PATH}"
 WORKDIR /
 COPY requirements.txt /requirements.txt
 RUN pip install -r requirements.txt
+RUN pip install runpod==1.7.7
+
 COPY handler.py /
 
 COPY README.md /
