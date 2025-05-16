@@ -18,10 +18,6 @@ RUN ln -sf /usr/bin/python3.11 /usr/local/bin/python && \
 
 # create venv
 ENV PATH="/.venv/bin:${PATH}"
-RUN uv venv --python 3.11 /.venv
-
-# install dependencies
-RUN uv pip install torch --extra-index-url https://download.pytorch.org/whl/cu121
 
 WORKDIR /
 COPY requirements.txt /requirements.txt
