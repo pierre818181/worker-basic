@@ -3,7 +3,7 @@
 
 This is a minimal serverless worker example. You can use the provided code to build a Docker image and deploy it as a serverless endpoint. When a request is sent to the endpoint, a worker spins up and executes the handler.py script. You can replace the sleep function with any machine learning task, such as image generation, text generation, or speech-to-text.
 
-## To test this code:
+## To test this:
 
 ```
 # 1. Create a Python virtual environment
