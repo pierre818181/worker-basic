@@ -1,4 +1,4 @@
-FROM python:3.10-slim
+FROM nvidia/cuda:12.1.1-cudnn8-runtime-ubuntu22.04
 
 WORKDIR /
 COPY requirements.txt /requirements.txt
